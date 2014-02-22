@@ -1,0 +1,21 @@
+<html>
+	<head>
+    <link rel="stylesheet" type="text/css"
+        href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <h1>cadastro dos bares</h1>
+
+    <form method="POST" action="{{url_for('cadastro')}}">
+       <label> Nome: </label>
+	   <input type="text" id="id_nome" name="nome"></input>
+	   <label> Endereço: </label>
+	   <input type="text" id="id_endereco" name="endereco"></input>
+	   <h2> Horario de Funcionamento:</h2>
+	   <input type="text" id="id_horario" name="horario"></input>
+	   <h2>Especialidade:</h2>
+	   <input type="text" id="id_especialidade" name="especialidade"></input><br/>
+	   <input id="salvar" type="submit" value="Enviar">
+    </form>
+
+</html>
+
