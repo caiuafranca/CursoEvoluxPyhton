@@ -3,17 +3,23 @@
     <link rel="stylesheet" type="text/css"
         href="{{ url_for('static', filename='style.css') }}">
     </head>
-    <h1>cadastro dos bares</h1>
+    <h1>Cadastro dos Bares</h1>
+
+    {% for message in get_flashed_messages() %}
+        <div class="flash">{{ message }}</div>
+        <br/>
+    {% endfor %}
 
     <form method="POST" action="{{url_for('cadastro')}}">
-       <label> Nome: </label>
+       <h2>Nome:</h2>
 	   <input type="text" id="id_nome" name="nome"></input>
-	   <label> Endereço: </label>
-	   <input type="text" id="id_endereco" name="endereco"></input>
-	   <h2> Horario de Funcionamento:</h2>
-	   <input type="text" id="id_horario" name="horario"></input>
-	   <h2>Especialidade:</h2>
-	   <input type="text" id="id_especialidade" name="especialidade"></input><br/>
+       <h2>Endereco:</h2>
+       <input type="text" id="id_endereco" name="endereco"></input>
+       <h2>Funcionamento:</h2>
+       <input type="text" id="id_funcionamento" name="funcionamento"></input>
+       <h2>Especialidade:</h2>
+       <input type="text" id="id_especialidade" name="especialidade"></input>
+	   	  
 	   <input id="salvar" type="submit" value="Enviar">
     </form>
 
